@@ -4,7 +4,7 @@ const preferredLanguage = navigator.languages?.[0] || navigator.language || 'en'
 const traditionalChinese = /^zh(?:-|$)/i.test(preferredLanguage);
 if (traditionalChinese) {
   const translations = {
-    badge: '非官方網頁體驗 · v0.1.0 CI',
+    badge: '非官方網頁體驗 · v0.3.0',
     source: '原作 GitHub ↗',
     download: '官方成品 ↗',
     notice: '使用說明',
@@ -13,13 +13,13 @@ if (traditionalChinese) {
     licenses: '授權與署名',
     heading: '更方便體驗 WordCraft',
     purpose: '本站只是讓大家不用安裝，就能體驗 WordCraft 原作。軟體由 ArtCraft 團隊與貢獻者開發；本站非官方營運，未獲官方背書。',
-    build: '載入官方 CI 預覽的 JavaScript／WASM 模組，搭配本站單頁啟動器；目前尚無公開正式 Release。',
+    build: '載入官方 v0.3.0 正式 Release 的 JavaScript／WASM 模組，搭配本站單頁啟動器。',
     parity: '網頁版與桌面版共用編輯引擎，但功能並非完全相同。',
     files: '透過瀏覽器選取或拖放文件；儲存與匯出會下載新檔，不會覆寫原始檔案。瀏覽器無法直接存取桌面版的資料夾與 TCP／MCP 服務。',
     persistence: '官方網頁入口停用自動儲存。關閉或重新整理前，請主動下載保存文件；本站沒有另外加入文件復原功能。',
     performance: '需要支援 WebGPU 或 WebGL2。大型文件與重運算受瀏覽器記憶體限制；手機縮放只調整顯示，並非完整的觸控介面。',
     alpha: '瀏覽器限制不代表桌面版也有相同限制；WordCraft 本身仍在 alpha 階段，桌面版也不保證所有功能完整。',
-    evidence: '說明依此 CI 成品的來源 commit 核對，未逐項驗證所有編輯功能。官方 CI 附件可能需要 GitHub 登入，且附件會過期。',
+    evidence: '說明依 v0.3.0 原始碼核對，未逐項驗證所有編輯功能。正式工作前，請另存副本並試用官方桌面版。',
     storage: '瀏覽器不允許儲存此偏好；下次開啟仍會顯示說明。',
     remember: '此瀏覽器不再提醒（仍可從「使用說明」重新開啟）',
     start: '開始體驗',

@@ -1,17 +1,18 @@
 {
-  "version": "0.1.0",
-  "releaseStatus": "official-ci-preview",
-  "commit": "c9824abfc20619ccc9dd876cfa1cc9ceb7c4dca4",
-  "workflowRun": "https://github.com/storytold/wordcraft/actions/runs/37600854436",
-  "artifact": "https://api.github.com/repos/storytold/wordcraft/actions/artifacts/11473520511/zip",
-  "artifactSha256": "c5c57b555f55a02eb33f4124e422992a664d56331838b452ff5aefe6ee7d2648",
-  "archive": "https://github.com/WavJaby/wordcraft-web/releases/download/upstream-c9824ab/wordcraft-web-0.1.0.zip",
-  "archiveSha256": "0376b4a2d24410d22a6365253269a224cead16e0b06f727c304e0a4b9db5a71e",
+  "version": "0.3.0",
+  "release": "v0.3.0",
+  "archive": "https://github.com/storytold/wordcraft/releases/download/v0.3.0/wordcraft-web-0.3.0.zip",
+  "archiveSha256": "99ebc21a35e2c7611e971f4e2e2efbab0905911b7735ed7104c83806514e2eb2",
   "files": [
     {
-      "path": "app/_headers",
-      "bytes": 326,
-      "sha256": "e3e253de74fb99a761fc91d4dec4b81ad6a1022b29c98761b5ac1e8ba5aff05a"
+      "path": "app/OFL-biz-ud-pgothic.txt",
+      "bytes": 4408,
+      "sha256": "e753d7155d53c747d037a445e584c8ecfca6dd79846db610417e282a736b28bc"
+    },
+    {
+      "path": "app/wordcraft-web-da2e873784bb53d3.js",
+      "bytes": 154947,
+      "sha256": "436f5b571bc55300d3be6e98763aaf94e142deebf5c026a62d0c285e4dac40b4"
     },
     {
       "path": "app/.htaccess",
@@ -19,19 +20,24 @@
       "sha256": "c92d61b428bff284fce08dc57f0255261476397f2cba5836c833974eded5c725"
     },
     {
-      "path": "app/HOSTING.md",
-      "bytes": 4245,
-      "sha256": "87db0c08683af7d91bb1eb3010718f685b2d80b030bf1a8c2e5a3ecc0454be13"
+      "path": "app/OFL-biz-ud-mincho.txt",
+      "bytes": 4408,
+      "sha256": "ef0ed524b3bd012f37015e986809eed6f67905456ebfc1ebd7fcc2765282ee01"
     },
     {
       "path": "app/index.html",
       "bytes": 1459,
-      "sha256": "c55b5f6195a9bdd13dbb3c2a35b69a308708f515eaee5bc61bf5ca7a1b66c0ff"
+      "sha256": "2e33314e6e2de60f21b9db777a3835831acb5441afa7d6fb25c0b87e13f37937"
     },
     {
-      "path": "app/LICENSE-APACHE",
-      "bytes": 10174,
-      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+      "path": "app/_headers",
+      "bytes": 326,
+      "sha256": "e3e253de74fb99a761fc91d4dec4b81ad6a1022b29c98761b5ac1e8ba5aff05a"
+    },
+    {
+      "path": "app/wordcraft-web-da2e873784bb53d3_bg.wasm",
+      "bytes": 31266843,
+      "sha256": "b52155a5877cb45936c99b49b0b4a71bc3922ce28aa3704e3aea97366986b35a"
     },
     {
       "path": "app/LICENSE-MIT",
@@ -39,35 +45,24 @@
       "sha256": "fc257de83c44ae49e4aad1cf777b886794be3ac9c8d00c010ef55935d5bbeba5"
     },
     {
-      "path": "app/OFL-biz-ud-mincho.txt",
-      "bytes": 4408,
-      "sha256": "ef0ed524b3bd012f37015e986809eed6f67905456ebfc1ebd7fcc2765282ee01"
-    },
-    {
-      "path": "app/OFL-biz-ud-pgothic.txt",
-      "bytes": 4408,
-      "sha256": "e753d7155d53c747d037a445e584c8ecfca6dd79846db610417e282a736b28bc"
-    },
-    {
       "path": "app/OFL-shippori-mincho.txt",
       "bytes": 4399,
       "sha256": "41fba056279be5f45ff9a99e44b7b53897b42732f5806d8e666e0ab49ac6bd38"
     },
     {
+      "path": "app/LICENSE-APACHE",
+      "bytes": 10174,
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+    },
+    {
       "path": "app/README.md",
-      "bytes": 18104,
-      "sha256": "2e0780a179321db6a1d460ab9f76effe232c1deca93369e453375d3a2c6ba7a6"
+      "bytes": 20200,
+      "sha256": "aa39a3c1b9e9dd952b62ec524f299186eea6f33331d1d321e82a83a53afc20d9"
     },
     {
-      "path": "app/wordcraft-web-a115730ec36cb9f8_bg.wasm",
-      "bytes": 30335250,
-      "sha256": "e5007298848f888a0d5ee9b48c65dd367657f058ecd9a55be6f0a2cdc0a6d3a5"
-    },
-    {
-      "path": "app/wordcraft-web-a115730ec36cb9f8.js",
-      "bytes": 154947,
-      "sha256": "cd5959288882d02accaacc60b98136cf14a7ac93241214285fb084a11a61dd19"
+      "path": "app/HOSTING.md",
+      "bytes": 4245,
+      "sha256": "87db0c08683af7d91bb1eb3010718f685b2d80b030bf1a8c2e5a3ecc0454be13"
     }
-  ],
-  "upstreamArchive": "wordcraft-web-0.1.0.zip"
+  ]
 }

@@ -2,11 +2,10 @@
 
 Try https://wavjaby.github.io/wordcraft-web/. Original project: https://github.com/storytold/wordcraft. WordCraft is made by the ArtCraft Team and contributors; this mirror is not operated or endorsed by them.
 
-## Official CI preview
+## Official release
 
-The official JS/Wasm inputs come from a CI preview, not a published upstream Release: version 0.1.0, source commit `c9824abfc20619ccc9dd876cfa1cc9ceb7c4dca4`, successful [workflow 37600854436](https://github.com/storytold/wordcraft/actions/runs/37600854436), artifact `release-web` 11473520511. GitHub's recorded artifact digest matches the downloaded archive. `upstream-files.json` pins both archives and every original application file. Upstream CI artifacts can expire; reproducible deployment requires the unchanged inner ZIP to be preserved as the pinned GitHub Release asset. No Wasm or ZIP is tracked in Git.
+Official JS/Wasm come from [WordCraft v0.3.0](https://github.com/storytold/wordcraft/releases/tag/v0.3.0). The archive matches the release's `SHA256SUMS.txt`; `upstream-files.json` pins its public URL, SHA-256 and every original application file. No Wasm or ZIP is tracked in Git.
 
-The supplied Gitea URL mirrors the original GitHub project. No public hosted editor was found in the official README, official product page, 87 GitHub forks or targeted searches on 2026-10-08; unindexed sites cannot be ruled out. The official product page returned HTTP 404.
 
 ## Hosting
 
@@ -18,7 +17,7 @@ Below 900 CSS pixels, the editor fits a 960-pixel virtual viewport; 50%/75%/100%
 
 ## Browser differences
 
-Static/configuration evidence from the pinned CI source; no exhaustive feature-parity claim:
+Static/configuration evidence from the v0.3.0 source; no exhaustive feature-parity claim:
 
 | Area | Browser behaviour | Source |
 |---|---|---|
@@ -32,7 +31,7 @@ Browser restrictions do not imply identical desktop restrictions. WordCraft rema
 
 ## Licenses
 
-WordCraft is MIT OR Apache-2.0. Preserve [NOTICE](app/NOTICE), [ATTRIBUTION.md](app/ATTRIBUTION.md), original licenses and font notices. Notices absent from the ZIP are supplemented from the exact CI source commit; default-font notices come from `epaint_default_fonts` 0.36.2. Independent host code adapted from the community mirrors is MIT. [ArtCraft brand terms](app/docs/brand/LICENSE-brand.txt) are separate; the host uses plain-text attribution and no extracted logos. No complete transitive dependency-license audit is claimed.
+WordCraft is MIT OR Apache-2.0. Preserve [NOTICE](app/NOTICE), [ATTRIBUTION.md](app/ATTRIBUTION.md), original licenses and font notices. Notices absent from the ZIP are supplemented from the release tag; default-font notices come from `epaint_default_fonts` 0.36.2. Independent host code adapted from the community mirrors is MIT. [ArtCraft brand terms](app/docs/brand/LICENSE-brand.txt) are separate; the host uses plain-text attribution and no extracted logos. No complete transitive dependency-license audit is claimed.
 
 `node --test tests/*.test.cjs` runs unit/selftest gates for delivery, failures, integrity, caching and provenance. Browser startup, import/save and mobile checks are separate runtime evidence.
 
@@ -40,11 +39,11 @@ WordCraft is MIT OR Apache-2.0. Preserve [NOTICE](app/NOTICE), [ATTRIBUTION.md](
 
 The community bootstrap in `app-loader.js` mounts the official canvas in the main document; no iframe is created. Original JS/Wasm are verified against `upstream-files.json`. The host, loader and layout are community code, not an official build or endorsement. Keep upstream copyright, licenses, NOTICE and third-party attributions; do not extract ArtCraft brand marks into the host.
 
-Wasm and compressed parts are ignored. CI downloads the exact archive pinned by URL + SHA-256, restores the verified Wasm, generates a fresh Pages artifact, and deploys it without committing binaries. WordCraft previews must be archived as GitHub Release assets because upstream CI artifacts expire. Browser asset caches retire prior Wasm hashes on service-worker activation. Existing Git history is not rewritten by this change.
+Wasm and compressed parts are ignored. CI downloads the exact archive pinned by URL + SHA-256, restores the verified Wasm, generates a fresh Pages artifact, and deploys it without committing binaries. Browser asset caches retire prior Wasm hashes on service-worker activation. Existing Git history is not rewritten by this change.
 
 1. Select an explicit official web ZIP and verify its published SHA-256; never silently follow latest.
 2. Run `node scripts/update-upstream.cjs --archive HTTPS_ZIP_URL --sha256 SHA256 --version VERSION` to inspect the update, then repeat with `--write`. The command rejects changed archive/bootstrap contracts; review upstream licensing, supplemental notices and web/desktop differences.
-3. Run `node scripts/build-site.cjs --output _site-review --write` and `node --test tests/*.test.cjs`; perform fresh-browser import/edit/export, mobile and renderer-failure checks.
+3. Run `node scripts/build-site.cjs --output _site-review --write`, then set `ARTCRAFT_SITE_DIR=_site-review` and run `node --test tests/*.test.cjs`; perform fresh-browser import/edit/export, mobile and renderer-failure checks.
 4. Commit only source, configuration and provenance metadata, then push. Pages builds its current version from scratch; neither the old nor the new Wasm/parts enter Git.
 
 For a clean checkout, `node scripts/update-upstream.cjs --restore` restores only the pinned Wasm. `--restore --archive LOCAL_ZIP` accepts a local copy with the same pinned archive hash.
