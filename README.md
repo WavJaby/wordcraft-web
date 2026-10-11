@@ -4,7 +4,7 @@ Try https://wavjaby.github.io/wordcraft-web/. Original project: https://github.c
 
 ## Official release
 
-Official JS/Wasm come from [WordCraft v0.3.0](https://github.com/storytold/wordcraft/releases/tag/v0.3.0). The archive matches the release's `SHA256SUMS.txt`; `upstream-files.json` pins its public URL, SHA-256 and every original application file. No Wasm or ZIP is tracked in Git.
+Official JS/Wasm come from [WordCraft v0.5.0](https://github.com/storytold/wordcraft/releases/tag/v0.5.0). The archive matches the release's `SHA256SUMS.txt`; `upstream-files.json` pins its public URL, SHA-256 and every original application file. No Wasm or ZIP is tracked in Git.
 
 
 ## Hosting
@@ -35,9 +35,9 @@ WordCraft is MIT OR Apache-2.0. Preserve [NOTICE](app/NOTICE), [ATTRIBUTION.md](
 
 `node --test tests/*.test.cjs` runs unit/selftest gates for delivery, failures, integrity, caching and provenance. Browser startup, import/save and mobile checks are separate runtime evidence.
 
-## Single-page hosting and updates
+## Embedded editor hosting and updates
 
-The community bootstrap in `app-loader.js` mounts the official canvas in the main document; no iframe is created. Original JS/Wasm are verified against `upstream-files.json`. The host, loader and layout are community code, not an official build or endorsement. Keep upstream copyright, licenses, NOTICE and third-party attributions; do not extract ArtCraft brand marks into the host.
+The community bootstrap in `app-loader.js` creates a same-origin `editor.html` iframe; `editor-bootstrap.js` starts the official canvas inside it. External scaling applies to the frame, so browser input coordinates remain in the editor's own viewport. The frame's canvas ResizeObserver reports CSS content size times current DPR while preserving native ResizeObserver entry/size types; other targets pass through. This aligns canvas pixels with eframe's input pixel basis during DPR emulation. Original JS/Wasm are verified against `upstream-files.json`. The host, loader and layout are community code, not an official build or endorsement. Keep upstream copyright, licenses, NOTICE and third-party attributions; do not extract ArtCraft brand marks into the host.
 
 Wasm and compressed parts are ignored. CI downloads the exact archive pinned by URL + SHA-256, restores the verified Wasm, generates a fresh Pages artifact, and deploys it without committing binaries. Browser asset caches retire prior Wasm hashes on service-worker activation. Existing Git history is not rewritten by this change.
 

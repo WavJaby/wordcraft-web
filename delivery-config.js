@@ -1,9 +1,9 @@
 'use strict';
 globalThis.WORDCRAFT_DELIVERY = Object.freeze({
-  "revision": "da2e873784bb53d3",
-  "wasmPath": "app/wordcraft-web-da2e873784bb53d3_bg.wasm",
-  "wasmBytes": 31266843,
-  "wasmSha256": "b52155a5877cb45936c99b49b0b4a71bc3922ce28aa3704e3aea97366986b35a",
+  "revision": "d288edabbaf506a2",
+  "wasmPath": "app/wordcraft-web-d288edabbaf506a2_bg.wasm",
+  "wasmBytes": 36329933,
+  "wasmSha256": "819f6433d858bb37afdf35bdc63e0e21a16cb56b43fc2efa70865e9096bc8994",
   "partsManifest": null,
   "partBytes": 524288,
   "downloadConcurrency": 4,
@@ -14,8 +14,8 @@ globalThis.WORDCRAFT_DELIVERY = Object.freeze({
   "slowNoticeSeconds": 30,
   "workerReadyTimeoutMs": 5000,
   "appId": "wordcraft",
-  "version": "0.3.0",
+  "version": "0.5.0",
   "canvasId": "wordcraft_canvas",
-  "jsPath": "app/wordcraft-web-da2e873784bb53d3.js",
+  "jsPath": "app/wordcraft-web-d288edabbaf506a2.js",
   "bootstrap": "trunk"
 });

@@ -4,7 +4,7 @@ const preferredLanguage = navigator.languages?.[0] || navigator.language || 'en'
 const traditionalChinese = /^zh(?:-|$)/i.test(preferredLanguage);
 if (traditionalChinese) {
   const translations = {
-    badge: '非官方網頁體驗 · v0.3.0',
+    badge: '非官方網頁體驗 · v0.5.0',
     source: '原作 GitHub ↗',
     download: '官方成品 ↗',
     notice: '使用說明',
@@ -13,7 +13,7 @@ if (traditionalChinese) {
     licenses: '授權與署名',
     heading: '更方便體驗 WordCraft',
     purpose: '本站只是讓大家不用安裝，就能體驗 WordCraft 原作。軟體由 ArtCraft 團隊與貢獻者開發；本站非官方營運，未獲官方背書。',
-    build: '載入官方 v0.3.0 正式 Release 的 JavaScript／WASM 模組，搭配本站單頁啟動器。',
+    build: '載入官方 v0.5.0 正式 Release 的 JavaScript／WASM 模組，搭配本站啟動器。',
     parity: '網頁版與桌面版共用編輯引擎，但功能並非完全相同。',
     files: '透過瀏覽器選取或拖放文件；儲存與匯出會下載新檔，不會覆寫原始檔案。瀏覽器無法直接存取桌面版的資料夾與 TCP／MCP 服務。',
     persistence: '官方網頁入口停用自動儲存。關閉或重新整理前，請主動下載保存文件；本站沒有另外加入文件復原功能。',
@@ -32,7 +32,7 @@ if (traditionalChinese) {
   };
   document.documentElement.lang = 'zh-Hant';
   document.title = 'WordCraft · 非官方網頁體驗站';
-  document.querySelector('meta[name="description"]').content = 'WordCraft 非官方網頁體驗站。使用官方 WebAssembly 模組與社群單頁啟動器；原作與所有貢獻歸 ArtCraft 團隊及貢獻者。';
+  document.querySelector('meta[name="description"]').content = 'WordCraft 非官方網頁體驗站。使用官方 WebAssembly 模組與社群啟動器；原作與所有貢獻歸 ArtCraft 團隊及貢獻者。';
   for (const element of document.querySelectorAll('[data-i18n]')) {
     element.textContent = translations[element.dataset.i18n];
   }
@@ -156,12 +156,7 @@ async function loadEditor() {
     document.getElementById('loading-time').textContent = words(`Elapsed: ${seconds} seconds`, `已經過 ${seconds} 秒`);
     if (seconds >= config.slowNoticeSeconds && !loading.dataset.verified && !failed) loadingNote.textContent = words('Still loading. Progress measures downloaded bytes, not compilation time.', '仍在載入；進度代表下載資料，不包含編譯時間。');
     if (failed) { clearInterval(monitor); return; }
-    const canvas = document.getElementById(config.canvasId);
-    const upstreamLoading = document.getElementById(`${config.appId}_loading`);
-    if (upstreamLoading?.textContent.includes('failed to start')) { fail(upstreamLoading.textContent); return; }
-    const running = config.bootstrap === 'filmcraft' ? Boolean(window.filmcraftLoad?.readyMs) : canvas?.hasAttribute('tabindex') && canvas.hasAttribute('width') && canvas.width > 0 && canvas.height > 0 && (config.appId === 'printcraft' || !upstreamLoading);
-    if (running) {
-      handle.state.ready = true;
+    if (handle?.state.ready) {
       loading.dataset.started = 'true';
       loading.hidden = true;
       clearInterval(monitor);

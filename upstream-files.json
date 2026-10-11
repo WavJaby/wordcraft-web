@@ -1,8 +1,8 @@
 {
-  "version": "0.3.0",
-  "release": "v0.3.0",
-  "archive": "https://github.com/storytold/wordcraft/releases/download/v0.3.0/wordcraft-web-0.3.0.zip",
-  "archiveSha256": "99ebc21a35e2c7611e971f4e2e2efbab0905911b7735ed7104c83806514e2eb2",
+  "version": "0.5.0",
+  "release": "v0.5.0",
+  "archive": "https://github.com/storytold/wordcraft/releases/download/v0.5.0/wordcraft-web-0.5.0.zip",
+  "archiveSha256": "196d0070fec6572238298e211ac4a3ea0510b7a0ac8d6096a5ee59f2ff69f85d",
   "files": [
     {
       "path": "app/OFL-biz-ud-pgothic.txt",
@@ -10,14 +10,19 @@
       "sha256": "e753d7155d53c747d037a445e584c8ecfca6dd79846db610417e282a736b28bc"
     },
     {
-      "path": "app/wordcraft-web-da2e873784bb53d3.js",
-      "bytes": 154947,
-      "sha256": "436f5b571bc55300d3be6e98763aaf94e142deebf5c026a62d0c285e4dac40b4"
+      "path": "app/OFL-noto-sans-arabic.txt",
+      "bytes": 4382,
+      "sha256": "07fc70bfeb985cc1a87a8587d0a0c80bab11c86c9dc3fd95b6f0cb332f983e96"
     },
     {
       "path": "app/.htaccess",
       "bytes": 495,
       "sha256": "c92d61b428bff284fce08dc57f0255261476397f2cba5836c833974eded5c725"
+    },
+    {
+      "path": "app/wordcraft-web-d288edabbaf506a2_bg.wasm",
+      "bytes": 36329933,
+      "sha256": "819f6433d858bb37afdf35bdc63e0e21a16cb56b43fc2efa70865e9096bc8994"
     },
     {
       "path": "app/OFL-biz-ud-mincho.txt",
@@ -27,7 +32,12 @@
     {
       "path": "app/index.html",
       "bytes": 1459,
-      "sha256": "2e33314e6e2de60f21b9db777a3835831acb5441afa7d6fb25c0b87e13f37937"
+      "sha256": "972a69e9be25caa0b21a8d06f36911a74047a32fe81abc4ec26a10bcf81c404c"
+    },
+    {
+      "path": "app/wordcraft-web-d288edabbaf506a2.js",
+      "bytes": 158836,
+      "sha256": "dacbc8812a255b414b6325854332c4c5b0241c7bafdb161152548cf3b45188c3"
     },
     {
       "path": "app/_headers",
@@ -35,9 +45,9 @@
       "sha256": "e3e253de74fb99a761fc91d4dec4b81ad6a1022b29c98761b5ac1e8ba5aff05a"
     },
     {
-      "path": "app/wordcraft-web-da2e873784bb53d3_bg.wasm",
-      "bytes": 31266843,
-      "sha256": "b52155a5877cb45936c99b49b0b4a71bc3922ce28aa3704e3aea97366986b35a"
+      "path": "app/OFL-noto-sans-cjk-sc.txt",
+      "bytes": 4301,
+      "sha256": "6a73f9541c2de74158c0e7cf6b0a58ef774f5a780bf191f2d7ec9cc53efe2bf2"
     },
     {
       "path": "app/LICENSE-MIT",
@@ -56,13 +66,13 @@
     },
     {
       "path": "app/README.md",
-      "bytes": 20200,
-      "sha256": "aa39a3c1b9e9dd952b62ec524f299186eea6f33331d1d321e82a83a53afc20d9"
+      "bytes": 23287,
+      "sha256": "15d525dd314be650a0ede9e23821f064ca2a606335fce39adfe59f8d89232eef"
     },
     {
       "path": "app/HOSTING.md",
-      "bytes": 4245,
-      "sha256": "87db0c08683af7d91bb1eb3010718f685b2d80b030bf1a8c2e5a3ecc0454be13"
+      "bytes": 4179,
+      "sha256": "77ae3e6252c357dfe917d47de515f1707321b00d99339412aefa1c42ab6c3b7c"
     }
   ]
 }
